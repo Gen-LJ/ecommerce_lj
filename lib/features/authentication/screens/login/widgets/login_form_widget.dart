@@ -1,4 +1,5 @@
 
+import 'package:ecommerce_lj/features/authentication/screens/sign_up/sign_up.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/sizes.dart';
@@ -57,7 +58,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(onPressed:(){
-
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupScreen()));
               }, child: const Text('Create Account')),
             )
           ],
