@@ -1,3 +1,4 @@
+import 'package:ecommerce_lj/Common/widgets/appbar/app_bar.dart';
 import 'package:flutter/material.dart';
 import '../../../Common/widgets/container/header_container.dart';
 
@@ -7,11 +8,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HeaderContainer(child: Container())
+            HeaderContainer(child: Column(
+              children: [
+                LJAppBar(title: Text('Hi'),
+                )
+              ],
+            ))
           ],
         ),
       ),

@@ -5,6 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class LJDeviceUtils{
+
+  static double getAppBarHeight(){
+    return kToolbarHeight;
+}
+
+
+
    static void hideKeyboard(BuildContext context){
      FocusScope.of(context).requestFocus(FocusNode());
    }
