@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../Common/widgets/custom_shapes/circular_container.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -9,19 +11,23 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              color: Colors.amber,
-              child: Stack(
-                children: [
-                  Container(
-                    width: 350,
-                    height: 350,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(350),
-                      color: Colors.white.withOpacity(0.3)
-                    ),
-                  )
-                ],
+            ClipPath(
+              child: Container(
+                color: Colors.amber.withOpacity(0.8),
+                child: const SizedBox(height: 350,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        top : -150,
+                          right: -180,
+                          child: CircularContainer()),
+                      Positioned(
+                          top: 100,
+                          right: -250,
+                          child: CircularContainer()),
+                    ],
+                  ),
+                ),
               ),
             )
           ],
@@ -29,4 +35,18 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+class CustomCurvedEdges extends CustomClipper<Path>{
+  @override
+  Path getClip(Size size) {
+    // TODO: implement getClip
+    throw UnimplementedError();
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return true;
+  }
+
 }
