@@ -4,8 +4,10 @@ import 'package:ecommerce_lj/features/authentication/screens/login/widgets/login
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
-import '../../../../Common/widgets.login_signup/divider_with_text.dart';
-import '../../../../Common/widgets.login_signup/social_icons.dart';
+
+import '../../../../Common/widgets/login_singnup/divider_with_text.dart';
+import '../../../../Common/widgets/login_singnup/social_icons.dart';
+
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

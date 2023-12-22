@@ -1,5 +1,6 @@
 
 import 'package:ecommerce_lj/features/authentication/screens/sign_up/sign_up.dart';
+import 'package:ecommerce_lj/features/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/sizes.dart';
@@ -51,7 +52,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(onPressed: (){
-
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BotNavigationScreen()));
               }, child: const Text('Sign In')),
             ),
             const SizedBox(height: LJSizes.spaceBtwItems,),

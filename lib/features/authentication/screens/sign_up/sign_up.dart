@@ -1,9 +1,12 @@
-import 'package:ecommerce_lj/Common/widgets.login_signup/divider_with_text.dart';
-import 'package:ecommerce_lj/Common/widgets.login_signup/social_icons.dart';
+
+import 'package:ecommerce_lj/features/authentication/screens/login/login.dart';
 import 'package:ecommerce_lj/features/authentication/screens/sign_up/widgets/sign_up_form_widget.dart';
 import 'package:ecommerce_lj/features/authentication/screens/sign_up/widgets/terms_condition_widget.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../Common/widgets/login_singnup/divider_with_text.dart';
+import '../../../../Common/widgets/login_singnup/social_icons.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -28,7 +31,7 @@ class SignupScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(onPressed:(){
-
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginScreen()));
                 }, child: const Text('Create Account')),
               ),
               const SizedBox(height: LJSizes.spaceBtwSections/1.2,),

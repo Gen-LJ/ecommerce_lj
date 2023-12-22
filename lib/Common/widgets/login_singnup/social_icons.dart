@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../utils/constants/sizes.dart';
+import '../../../utils/constants/sizes.dart';
 
 class SocialIcons extends StatelessWidget {
   const SocialIcons({
