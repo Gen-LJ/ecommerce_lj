@@ -23,7 +23,8 @@ class LJAppTheme {
       chipTheme: LJChipTheme.lightChipTheme,
       elevatedButtonTheme: LJElevatedButtomTheme.lightElevatedButtonTheme,
       outlinedButtonTheme: LJOutlinedButtomTheme.lightOutlinedButtomTheme,
-      inputDecorationTheme: LJTextFormFieldTheme.lightInputDecorationTheme);
+      inputDecorationTheme: LJTextFormFieldTheme.lightInputDecorationTheme,
+  );
   static ThemeData darkTheme = ThemeData(
       fontFamily: 'Ubuntu',
 

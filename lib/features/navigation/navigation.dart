@@ -1,6 +1,6 @@
 import 'package:ecommerce_lj/features/navigation/bloc/bot_nav_bloc.dart';
 import 'package:ecommerce_lj/features/shop/screens/favourite.dart';
-import 'package:ecommerce_lj/features/shop/screens/home.dart';
+import 'package:ecommerce_lj/features/shop/screens/home/home.dart';
 import 'package:ecommerce_lj/features/shop/screens/profile.dart';
 import 'package:ecommerce_lj/features/shop/screens/store.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
