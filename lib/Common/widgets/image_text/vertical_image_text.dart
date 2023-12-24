@@ -42,7 +42,7 @@ class VerticalIconText extends StatelessWidget {
                 child: Center(child: Text(
                   title,
                   style: Theme.of(context).textTheme.labelSmall!.apply(
-                      color: textColor ?? (dark? Colors.white : Colors.black)),
+                      color: textColor ?? (dark? Colors.black : Colors.white)),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
 

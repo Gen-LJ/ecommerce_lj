@@ -14,7 +14,7 @@ class HeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return CurvedEdgeWidget(child: Container(
       color: Colors.amber.withOpacity(0.8),
-      child:  SizedBox(height: 350,
+      child:  SizedBox(height: 300,
         child: Stack(
           children: [
             const Positioned(
