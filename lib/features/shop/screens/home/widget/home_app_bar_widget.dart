@@ -1,4 +1,5 @@
 
+import 'package:ecommerce_lj/features/shop/screens/store.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../Common/widgets/appbar/app_bar.dart';
@@ -15,11 +16,13 @@ class HomeAppBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Good Day For Shopping Ain\'t It.',style: Theme.of(context).textTheme.labelMedium,),
-        Text('Genichiro',style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),)
+        Text('Genichiro Ashina',style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),)
       ],
     ),
-      actions: const [
-        CartCounterIcon(iconColor: Colors.white,)
+      actions:  [
+        CartCounterIcon(iconColor: Colors.white,onPressed: (){
+          //Navigator.push(context, MaterialPageRoute(builder: (context)=>StoreScreen()));
+        },)
       ],
     );
   }
