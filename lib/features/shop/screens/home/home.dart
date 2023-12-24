@@ -1,7 +1,9 @@
 import 'package:ecommerce_lj/features/shop/screens/home/widget/home_app_bar_widget.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
+import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import '../../../../Common/widgets/container/header_container.dart';
+import '../../../../Common/widgets/image_text/vertical_image_text.dart';
 import '../../../../Common/widgets/texts/section_header.dart';
 
 
@@ -51,11 +53,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     SizedBox(height: LJSizes.md,),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace),
+                      padding: const EdgeInsets.only(left: LJSizes.defaultSpace),
                       child: Column(
                         children: [
                           SectionHeader(title: 'Categories',showActionButton: false,),
                           const SizedBox(height: LJSizes.spaceBtwItems,),
+                          SizedBox(
+                            height: 80,
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              scrollDirection: Axis.horizontal,
+                                itemCount: 9,
+                                itemBuilder: (context,index){
+                                return VerticalIconText(title: 'Shoe Sneakers',icon: Icons.shopify,);
+                                }),
+                          )
 
                         ],
                       ),
@@ -71,6 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
 
 
 
