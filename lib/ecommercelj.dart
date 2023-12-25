@@ -1,6 +1,6 @@
 
 import 'package:ecommerce_lj/features/navigation/bloc/bot_nav_bloc.dart';
-import 'package:ecommerce_lj/features/shop/screens/home/bloc/carousel_bloc.dart';
+import 'package:ecommerce_lj/features/shop/screens/home/bloc/carousel_bloc/carousel_bloc.dart';
 import 'package:ecommerce_lj/features/splash/splash.dart';
 import 'package:ecommerce_lj/utils/theme/theme.dart';
 import 'package:flutter/material.dart';

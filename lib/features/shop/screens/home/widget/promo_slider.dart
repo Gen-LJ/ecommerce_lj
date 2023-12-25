@@ -1,11 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce_lj/features/shop/screens/home/bloc/carousel_bloc.dart';
+import 'package:ecommerce_lj/features/shop/screens/home/bloc/carousel_bloc/carousel_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../../Common/widgets/container/circular_container.dart';
 import '../../../../../Common/widgets/image/rounded_image.dart';
-import '../../../../../utils/constants/images_string.dart';
 import '../../../../../utils/constants/sizes.dart';
 
 class PromoSlider extends StatefulWidget {
@@ -34,7 +32,7 @@ class _PromoSliderState extends State<PromoSlider> {
               return RoundedImage(imageUrl: widget.banners[index]);
             }).toList()
         ),
-        SizedBox(
+        const SizedBox(
           height: LJSizes.spaceBtwItems / 2,
         ),
         Padding(
