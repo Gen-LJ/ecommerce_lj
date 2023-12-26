@@ -42,7 +42,15 @@ class _HomeCategoriesState extends State<HomeCategories> {
           if(state is CategoriesFail){
             return Text(state.error);
           }
-          return const Text('Loading');
+          return ListView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              itemCount: 6,
+              itemBuilder: (context, index) {
+                return  const VerticalIconText(title: '',
+                  icon: Icons.cached_rounded,
+                  textColor: Colors.white,);
+              });
         },
       ),
     );

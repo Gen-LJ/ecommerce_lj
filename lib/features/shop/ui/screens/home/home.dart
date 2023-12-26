@@ -86,6 +86,10 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: LJSizes.spaceBtwItems,
             ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal : LJSizes.defaultSpace),
+              child: SectionHeader(title: 'Popular Products',showActionButton: true,),
+            ),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace),
