@@ -1,11 +1,12 @@
 import 'package:ecommerce_lj/features/navigation/bloc/bot_nav_bloc.dart';
-import 'package:ecommerce_lj/features/shop/screens/favourite.dart';
-import 'package:ecommerce_lj/features/shop/screens/home/home.dart';
-import 'package:ecommerce_lj/features/shop/screens/profile.dart';
-import 'package:ecommerce_lj/features/shop/screens/store.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../personalization/ui/screen/favourite.dart';
+import '../personalization/ui/screen/profile.dart';
+import '../shop/ui/screens/home/home.dart';
+import '../shop/ui/screens/store/store.dart';
 
 class BotNavigationScreen extends StatefulWidget {
   const BotNavigationScreen({super.key});

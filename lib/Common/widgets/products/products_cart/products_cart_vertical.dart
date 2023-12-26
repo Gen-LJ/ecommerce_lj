@@ -5,7 +5,6 @@ import 'package:ecommerce_lj/utils/constants/images_string.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
-
 import '../../texts/ProductPriceText.dart';
 import '../../texts/product_title_text.dart';
 

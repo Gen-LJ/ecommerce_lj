@@ -27,8 +27,8 @@ class VerticalIconText extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 50,
-              width: 50,
+              height: 60,
+              width: 60,
               padding: EdgeInsets.all(LJSizes.xs),
               decoration: BoxDecoration(
                   color: backgroundColor ?? (dark? Colors.black : Colors.white),
@@ -38,7 +38,7 @@ class VerticalIconText extends StatelessWidget {
             ),
             SizedBox(height: LJSizes.spaceBtwItems/4,),
             SizedBox(
-                width: 50,
+                width: 60,
                 child: Center(child: Text(
                   title,
                   style: Theme.of(context).textTheme.labelSmall!.apply(
