@@ -1,5 +1,6 @@
 
 import 'package:ecommerce_lj/features/navigation/bloc/bot_nav_bloc.dart';
+import 'package:ecommerce_lj/features/shop/bloc/all_products/all_products_cubit.dart';
 import 'package:ecommerce_lj/features/shop/bloc/categories/categories_cubit.dart';
 import 'package:ecommerce_lj/features/splash/splash.dart';
 import 'package:ecommerce_lj/utils/theme/theme.dart';
@@ -21,6 +22,9 @@ class EcommerceLJ extends StatelessWidget {
         ),
         BlocProvider<CategoriesCubit>(
           create: (context) => CategoriesCubit(),
+        ),
+        BlocProvider<AllProductsCubit>(
+          create: (context) => AllProductsCubit(),
         )
       ],
       child: MaterialApp(

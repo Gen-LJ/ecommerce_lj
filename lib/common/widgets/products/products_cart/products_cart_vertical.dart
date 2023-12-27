@@ -5,14 +5,15 @@ import 'package:ecommerce_lj/utils/constants/images_string.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
-import '../../texts/ProductPriceText.dart';
+import '../../texts/product_price_text.dart';
 import '../../texts/brand_title_with_verified.dart';
 import '../../texts/product_title_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({
-    super.key,
+    super.key, required this.title,
   });
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -75,16 +76,16 @@ class ProductCardVertical extends StatelessWidget {
             const SizedBox(
               height: LJSizes.spaceBtwItems / 5,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: LJSizes.sm),
+             Padding(
+              padding: EdgeInsets.only(left: LJSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductTitleText(
-                    title: 'Nike Green Sneaker',
+                  ProductTitleText(
+                    title: title,
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: LJSizes.spaceBtwItems / 5,
                   ),
                   BrandTitleWithVerified(title: 'Nike',),

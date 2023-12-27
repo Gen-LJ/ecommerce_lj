@@ -1,4 +1,5 @@
 class ApiConst{
-  static const baseUrl = 'https://dummyjson.com/products/';
-  static const categoriesEndPoint = 'categories';
+  static const baseUrl = 'https://dummyjson.com/';
+  static const allProductEndPoint = 'products';
+  static const categoriesEndPoint = 'products/categories';
 }

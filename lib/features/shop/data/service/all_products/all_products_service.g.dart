@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'categories_service.dart';
+part of 'all_products_service.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'categories_service.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _CategoriesService implements CategoriesService {
-  _CategoriesService(
+class _AllProductService implements AllProductService {
+  _AllProductService(
     this._dio, {
     this.baseUrl,
   }) {
@@ -21,20 +21,20 @@ class _CategoriesService implements CategoriesService {
   String? baseUrl;
 
   @override
-  Future<List<String>> getCategories() async {
+  Future<ProductModel> getAllProduct() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<String>>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ProductModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              'products/categories',
+              'products',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -43,7 +43,7 @@ class _CategoriesService implements CategoriesService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = _result.data!.cast<String>();
+    final value = ProductModel.fromJson(_result.data!);
     return value;
   }
 
