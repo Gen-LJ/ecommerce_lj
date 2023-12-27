@@ -107,7 +107,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     return GridLayout(
                       itemCount: state.allProducts.length,
                       itemBuilder: (context, index) {
-                        return ProductCardVertical(title: state.allProducts[index].title ?? '',);
+                        return ProductCardVertical(
+                          title: state.allProducts[index].title ?? '',
+                          brandName : state.allProducts[index].brand ?? '',
+                          imageUrl : state.allProducts[index].thumbnail ?? '',
+                            price : (state.allProducts[index].price).toString() ?? ''
+
+                        );
                       });
                   }
                   else if(state is AllProductsLoad){

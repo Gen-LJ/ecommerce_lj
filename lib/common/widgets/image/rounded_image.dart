@@ -36,6 +36,8 @@ class RoundedImage extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
+        width: width,
+        height: height,
         decoration: BoxDecoration(
             border: border,
             color: backgroundColor,

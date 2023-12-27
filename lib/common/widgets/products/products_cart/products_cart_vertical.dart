@@ -11,9 +11,12 @@ import '../../texts/product_title_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({
-    super.key, required this.title,
+    super.key, required this.title, required this.brandName, required this.imageUrl, required this.price,
   });
   final String title;
+  final String brandName;
+  final String imageUrl;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +39,15 @@ class ProductCardVertical extends StatelessWidget {
               height: 180,
               padding: const EdgeInsets.all(LJSizes.xs),
               backgroundColor:
-                  dark ? Colors.black.withOpacity(0.3) : Colors.white,
+                  dark ? Colors.transparent : Colors.transparent,
               child: Stack(children: [
                 Center(
                   child: RoundedImage(
-                    imageUrl: LJImages.shoe1,
+                    width: 180,
+                    height: 180,
+                    fit: BoxFit.fill,
+                    isNetworkImage: true,
+                    imageUrl: imageUrl,
                     applyImageRadius: true,
                     backgroundColor:
                         dark ? Colors.black.withOpacity(0.001) : Colors.white,
@@ -88,7 +95,7 @@ class ProductCardVertical extends StatelessWidget {
                   SizedBox(
                     height: LJSizes.spaceBtwItems / 5,
                   ),
-                  BrandTitleWithVerified(title: 'Nike',),
+                  BrandTitleWithVerified(title: brandName,),
                 ],
               ),
             ),
@@ -96,9 +103,9 @@ class ProductCardVertical extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: LJSizes.sm),
-                  child: ProductPriceText(price: '400.99'),
+                 Padding(
+                  padding: const EdgeInsets.only(left: LJSizes.sm),
+                  child: ProductPriceText(price: price),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 1.0),

@@ -27,11 +27,13 @@ class BrandTitleWithVerified extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        BrandTitleText(title: title,
-        maxLine: maxLine,
-        color: textColor,
-        textAlign: textAlign,
-        brandTextSizes: brandTextSizes,),
+        Flexible(
+          child: BrandTitleText(title: title,
+          maxLine: maxLine,
+          color: textColor,
+          textAlign: textAlign,
+          brandTextSizes: brandTextSizes,),
+        ),
         const SizedBox(
           width: LJSizes.xs,
         ),
