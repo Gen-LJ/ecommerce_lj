@@ -6,6 +6,7 @@ import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import '../../texts/ProductPriceText.dart';
+import '../../texts/brand_title_with_verified.dart';
 import '../../texts/product_title_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
@@ -86,25 +87,7 @@ class ProductCardVertical extends StatelessWidget {
                   const SizedBox(
                     height: LJSizes.spaceBtwItems / 5,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        style: Theme.of(context).textTheme.labelMedium,
-                        textAlign: TextAlign.left,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(
-                        width: LJSizes.sm,
-                      ),
-                      const Icon(
-                        Icons.verified_rounded,
-                        color: Colors.blue,
-                        size: LJSizes.iconSm,
-                      )
-                    ],
-                  ),
+                  BrandTitleWithVerified(title: 'Nike',),
                 ],
               ),
             ),

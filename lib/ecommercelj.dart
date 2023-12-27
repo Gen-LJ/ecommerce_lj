@@ -5,7 +5,6 @@ import 'package:ecommerce_lj/features/splash/splash.dart';
 import 'package:ecommerce_lj/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'features/shop/ui/screens/home/bloc/carousel_bloc/carousel_bloc.dart';
 
 class EcommerceLJ extends StatelessWidget {
