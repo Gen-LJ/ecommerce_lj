@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ShadowStyle {
-  static final verticalProductShadow =  BoxShadow(
+  static const verticalProductShadow =  BoxShadow(
     color: Colors.grey,
     blurRadius: 0,
     spreadRadius: 0,
-    offset:  const Offset(0, 2)
+    offset:  Offset(0, 2)
   );
-  static final horizontalProductShadow =  BoxShadow(
+  static const horizontalProductShadow =  BoxShadow(
       color: Colors.grey,
       blurRadius: 0,
       spreadRadius: 0,

@@ -50,7 +50,7 @@ class _PromoSliderState extends State<PromoSlider> {
                       backgroundColor: state.carouselIndex == i ? Colors.amber : Colors.grey,
                       height: 4,
                       width: 20,
-                      margin: EdgeInsets.only(right: 10),
+                      margin: const EdgeInsets.only(right: 10),
                       opacity: 1,
                     ),
                 ],

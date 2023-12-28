@@ -6,4 +6,6 @@ class LJImages{
   static const String shoe1 = 'assets/images/products/shoe1.png';
   static const String shoe2 = 'assets/images/products/shoe2.png';
   static const String shoe3 = 'assets/images/products/shoe24.png';
+
+  static const String adidasLogo = 'assets/images/logos/adidas-logo.jpg';
 }

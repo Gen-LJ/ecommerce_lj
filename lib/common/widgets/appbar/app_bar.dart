@@ -21,7 +21,7 @@ class LJAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: LJSizes.md),
+      padding: const EdgeInsets.symmetric(horizontal: LJSizes.md),
       child: AppBar(
         automaticallyImplyLeading: false,
         leading: showBackArrow
@@ -29,7 +29,7 @@ class LJAppBar extends StatelessWidget implements PreferredSizeWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: Icon(Icons.arrow_back_ios_new))
+                icon: const Icon(Icons.arrow_back_ios_new))
             : leadingIcon != null
                 ? IconButton(
                     onPressed: leadingCallback, icon: Icon(leadingIcon))

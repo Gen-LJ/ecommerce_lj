@@ -52,14 +52,14 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(onPressed: (){
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BotNavigationScreen()));
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const BotNavigationScreen()));
               }, child: const Text('Sign In')),
             ),
             const SizedBox(height: LJSizes.spaceBtwItems,),
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(onPressed:(){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignupScreen()));
               }, child: const Text('Create Account')),
             )
           ],

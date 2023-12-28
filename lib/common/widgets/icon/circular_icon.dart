@@ -27,11 +27,9 @@ class CircularIcon extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: backgroundColor != null ?
-        backgroundColor
-            : LJDeviceUtils.isDarkMode(context) ?
+        color: backgroundColor ?? (LJDeviceUtils.isDarkMode(context) ?
         Colors.black.withOpacity(0.1)
-            : Colors.white.withOpacity(0.9),
+            : Colors.white.withOpacity(0.9)),
       borderRadius: BorderRadius.circular(100)),
       child: IconButton(
         onPressed: onPressed,

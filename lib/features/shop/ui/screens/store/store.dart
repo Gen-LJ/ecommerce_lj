@@ -1,13 +1,20 @@
+
+
 import 'package:ecommerce_lj/Common/widgets/appbar/app_bar.dart';
 import 'package:ecommerce_lj/Common/widgets/appbar/tab_bar.dart';
+import 'package:ecommerce_lj/Common/widgets/container/rounded_container.dart';
+import 'package:ecommerce_lj/Common/widgets/image/rounded_image.dart';
 import 'package:ecommerce_lj/Common/widgets/layout/grid_layout.dart';
 import 'package:ecommerce_lj/Common/widgets/products/carts/cart_counter_icon.dart';
 import 'package:ecommerce_lj/Common/widgets/texts/section_header.dart';
 import 'package:ecommerce_lj/features/shop/bloc/categories/categories_cubit.dart';
+import 'package:ecommerce_lj/utils/constants/images_string.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
+import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../Common/widgets/products/brand_cart/brand_card.dart';
+import '../../../../../common/widgets/brand/brand_show_case.dart';
 
 class StoreScreen extends StatefulWidget {
   const StoreScreen({super.key});
@@ -45,7 +52,7 @@ class _StoreScreenState extends State<StoreScreen> {
                     SliverAppBar(
                         pinned: true,
                         floating: true,
-                        expandedHeight: 350,
+                        expandedHeight: 330,
                         //backgroundColor: Colors.blue,
                         flexibleSpace: Padding(
                           padding: const EdgeInsets.symmetric(
@@ -98,7 +105,15 @@ class _StoreScreenState extends State<StoreScreen> {
                         ))
                   ];
                 },
-                body: Container()),
+                body:  const TabBarView(
+                    children: [
+                  Padding(padding: EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace,vertical: LJSizes.defaultSpace/2),
+                  child: Column(
+                    children: [
+                      BrandShowCase(images: [LJImages.shoe3,LJImages.shoe2,LJImages.banner1,LJImages.banner3],),
+                    ],
+                  ),),
+                ])),
           ),
         );
         }
@@ -113,3 +128,4 @@ class _StoreScreenState extends State<StoreScreen> {
     );
   }
 }
+

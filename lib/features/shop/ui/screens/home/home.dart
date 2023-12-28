@@ -12,7 +12,6 @@ import '../../../../../Common/widgets/layout/grid_layout.dart';
 import '../../../../../Common/widgets/products/products_cart/products_cart_vertical.dart';
 import '../../../../../Common/widgets/texts/section_header.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -35,52 +34,52 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             HeaderContainer(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const HomeAppBar(),
-                    const SizedBox(
-                      height: LJSizes.xs,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: LJSizes.defaultSpace,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const HomeAppBar(),
+                const SizedBox(
+                  height: LJSizes.xs,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: LJSizes.defaultSpace,
+                  ),
+                  child: SearchAnchor(builder: (context, controller) {
+                    return const SearchBar(
+                      padding: MaterialStatePropertyAll<EdgeInsets>(
+                          EdgeInsets.symmetric(horizontal: 15)),
+                      leading: Icon(Icons.search),
+                      hintText: 'Search in Shop',
+                    );
+                  }, suggestionsBuilder: (context, controller) {
+                    return List.generate(5, (index) {
+                      return ListTile(
+                        title: Text('Item $index'),
+                      );
+                    });
+                  }),
+                ),
+                const SizedBox(
+                  height: LJSizes.md,
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: LJSizes.defaultSpace),
+                  child: Column(
+                    children: [
+                      SectionHeader(
+                        title: 'Categories',
+                        showActionButton: false,
+                        textColor: Colors.white,
                       ),
-                      child: SearchAnchor(builder: (context, controller) {
-                        return const SearchBar(
-                          padding: MaterialStatePropertyAll<EdgeInsets>(
-                              EdgeInsets.symmetric(horizontal: 15)),
-                          leading: Icon(Icons.search),
-                          hintText: 'Search in Shop',
-                        );
-                      }, suggestionsBuilder: (context, controller) {
-                        return List.generate(5, (index) {
-                          return ListTile(
-                            title: Text('Item $index'),
-                          );
-                        });
-                      }),
-                    ),
-                    const SizedBox(
-                      height: LJSizes.md,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: LJSizes.defaultSpace),
-                      child: Column(
-                        children: [
-                          SectionHeader(
-                            title: 'Categories',
-                            showActionButton: false,
-                            textColor: Colors.white,
-                          ),
-                          SizedBox(
-                            height: LJSizes.spaceBtwItems,
-                          ),
-                          HomeCategories()
-                        ],
+                      SizedBox(
+                        height: LJSizes.spaceBtwItems,
                       ),
-                    ),
-                  ],
-                )),
+                      HomeCategories()
+                    ],
+                  ),
+                ),
+              ],
+            )),
             const PromoSlider(
               banners: [
                 LJImages.banner1,
@@ -96,33 +95,40 @@ class _HomeScreenState extends State<HomeScreen> {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace),
               child: SectionHeader(
-                title: 'Popular Products', showActionButton: true,),
+                title: 'Popular Products',
+                showActionButton: true,
+              ),
             ),
             Padding(
               padding:
-              const EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace),
+                  const EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace),
               child: BlocBuilder<AllProductsCubit, AllProductsState>(
                 builder: (context, state) {
-                  if(state is AllProductsSuccess) {
+                  if (state is AllProductsSuccess) {
                     return GridLayout(
-                      itemCount: state.allProducts.length,
-                      itemBuilder: (context, index) {
-                        return ProductCardVertical(
-                          title: state.allProducts[index].title ?? '',
-                          brandName : state.allProducts[index].brand ?? '',
-                          imageUrl : state.allProducts[index].thumbnail ?? '',
-                            price : (state.allProducts[index].price).toString() ?? ''
+                        itemCount: state.allProducts.length,
+                        itemBuilder: (context, index) {
+                          return ProductCardVertical(
+                              title: state.allProducts[index].title ?? '',
+                              brandName: state.allProducts[index].brand ?? '',
+                              imageUrl: state.allProducts[index].thumbnail ?? '',
+                              price: (state.allProducts[index].price).toString() ?? '',
+                              discountPercentage : state.allProducts[index].discountPercentage.toString() ?? '',
 
-                        );
-                      });
+                          );
+                        });
+                  } else if (state is AllProductsLoad) {
+                    return const Center(
+                      child: LinearProgressIndicator(),
+                    );
+                  } else if (state is AllProductsFail) {
+                    return Center(
+                      child: Text(state.error),
+                    );
                   }
-                  else if(state is AllProductsLoad){
-                    return const Center(child: CircularProgressIndicator(color: Colors.amber,),);
-                  }
-                  else if(state is AllProductsFail){
-                    return Center(child: Text(state.error),);
-                  }
-                  return Center(child: Text('Loading'),);
+                  return const Center(
+                    child: Text('Loading'),
+                  );
                 },
               ),
             ),

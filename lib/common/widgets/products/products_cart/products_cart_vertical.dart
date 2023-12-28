@@ -1,7 +1,6 @@
 import 'package:ecommerce_lj/Common/widgets/container/rounded_container.dart';
 import 'package:ecommerce_lj/Common/widgets/icon/circular_icon.dart';
 import 'package:ecommerce_lj/Common/widgets/image/rounded_image.dart';
-import 'package:ecommerce_lj/utils/constants/images_string.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
@@ -11,12 +10,13 @@ import '../../texts/product_title_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({
-    super.key, required this.title, required this.brandName, required this.imageUrl, required this.price,
+    super.key, required this.title, required this.brandName, required this.imageUrl, required this.price, required this.discountPercentage,
   });
   final String title;
   final String brandName;
   final String imageUrl;
   final String price;
+  final String discountPercentage;
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +61,7 @@ class ProductCardVertical extends StatelessWidget {
                     radius: LJSizes.sm,
                     padding: const EdgeInsets.all(3),
                     child: Text(
-                      '50%',
+                      '$discountPercentage %',
                       style: Theme.of(context).textTheme.labelLarge,
                     ),
                   ),
@@ -84,7 +84,7 @@ class ProductCardVertical extends StatelessWidget {
               height: LJSizes.spaceBtwItems / 5,
             ),
              Padding(
-              padding: EdgeInsets.only(left: LJSizes.sm),
+              padding: const EdgeInsets.only(left: LJSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -92,7 +92,7 @@ class ProductCardVertical extends StatelessWidget {
                     title: title,
                     smallSize: true,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: LJSizes.spaceBtwItems / 5,
                   ),
                   BrandTitleWithVerified(title: brandName,),

@@ -29,14 +29,14 @@ class VerticalIconText extends StatelessWidget {
             Container(
               height: 60,
               width: 60,
-              padding: EdgeInsets.all(LJSizes.xs),
+              padding: const EdgeInsets.all(LJSizes.xs),
               decoration: BoxDecoration(
                   color: backgroundColor ?? (dark? Colors.black : Colors.white),
                   borderRadius: BorderRadius.circular(100)
               ),
               child: Icon(icon,color: dark? Colors.white : Colors.black),
             ),
-            SizedBox(height: LJSizes.spaceBtwItems/4,),
+            const SizedBox(height: LJSizes.spaceBtwItems/4,),
             SizedBox(
                 width: 60,
                 child: Center(child: Text(

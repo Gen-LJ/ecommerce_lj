@@ -6,7 +6,7 @@ part 'carousel_event.dart';
 part 'carousel_state.dart';
 
 class CarouselBloc extends Bloc<CarouselEvent, CarouselState> {
-  CarouselBloc() : super(CarouselInitial(carouselIndex: 0)) {
+  CarouselBloc() : super(const CarouselInitial(carouselIndex: 0)) {
     on<CarouselEvent>((event, emit) {
 if(event is UpdatePage){
   emit(CarouselInitial(carouselIndex: event.carouselIndex));

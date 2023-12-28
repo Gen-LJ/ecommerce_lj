@@ -23,7 +23,7 @@ class _BotNavigationScreenState extends State<BotNavigationScreen> {
     final dark = LJDeviceUtils.isDarkMode(context);
 
     final List<Widget> _bodyList = [
-      HomeScreen(),
+      const HomeScreen(),
       const StoreScreen(),
       const FavouriteScreen(),
       const ProfileScreen(),

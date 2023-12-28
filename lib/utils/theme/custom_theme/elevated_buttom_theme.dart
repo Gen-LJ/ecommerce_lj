@@ -10,9 +10,9 @@ class LJElevatedButtomTheme{
         backgroundColor: Colors.amber,
         disabledBackgroundColor: Colors.grey,
         disabledForegroundColor: Colors.grey,
-        side: BorderSide(color: Colors.amber),
-        padding: EdgeInsets.symmetric(vertical: 18),
-        textStyle: TextStyle().copyWith(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w600,fontFamily: 'Ubuntu'),
+        side: const BorderSide(color: Colors.amber),
+        padding: const EdgeInsets.symmetric(vertical: 18),
+        textStyle: const TextStyle().copyWith(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w600,fontFamily: 'Ubuntu'),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
       )
       );
@@ -24,9 +24,9 @@ class LJElevatedButtomTheme{
           backgroundColor: Colors.amber,
           disabledBackgroundColor: Colors.grey,
           disabledForegroundColor: Colors.grey,
-          side: BorderSide(color: Colors.amber),
-          padding: EdgeInsets.symmetric(vertical: 18),
-          textStyle: TextStyle().copyWith(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w600,fontFamily: 'Ubuntu'),
+          side: const BorderSide(color: Colors.amber),
+          padding: const EdgeInsets.symmetric(vertical: 18),
+          textStyle: const TextStyle().copyWith(fontSize: 16,color: Colors.white,fontWeight: FontWeight.w600,fontFamily: 'Ubuntu'),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
       )
   );

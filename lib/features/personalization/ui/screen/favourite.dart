@@ -11,7 +11,7 @@ class FavouriteScreen extends StatelessWidget {
       length: 5,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Favourite'),
+          title: const Text('Favourite'),
           centerTitle: true,
       ),
     ));
