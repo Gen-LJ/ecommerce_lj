@@ -10,13 +10,21 @@ import '../../texts/product_title_text.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({
-    super.key, required this.title, required this.brandName, required this.imageUrl, required this.price, required this.discountPercentage,
+    super.key,
+    required this.title,
+    required this.brandName,
+    required this.imageUrl,
+    required this.price,
+    required this.discountPercentage,
+    this.isNetworkImage = false,
   });
+
   final String title;
   final String brandName;
   final String imageUrl;
   final String price;
   final String discountPercentage;
+  final bool isNetworkImage;
 
   @override
   Widget build(BuildContext context) {
@@ -38,19 +46,18 @@ class ProductCardVertical extends StatelessWidget {
             RoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(LJSizes.xs),
-              backgroundColor:
-                  dark ? Colors.transparent : Colors.transparent,
+              backgroundColor: dark ? Colors.transparent : Colors.transparent,
               child: Stack(children: [
                 Center(
                   child: RoundedImage(
                     width: 180,
                     height: 180,
                     fit: BoxFit.fill,
-                    isNetworkImage: true,
+                    isNetworkImage: isNetworkImage,
                     imageUrl: imageUrl,
                     applyImageRadius: true,
                     backgroundColor:
-                        dark ? Colors.black.withOpacity(0.001) : Colors.white,
+                        dark ? Colors.black.withOpacity(0.4) : Colors.white,
                   ),
                 ),
                 Positioned(
@@ -83,7 +90,7 @@ class ProductCardVertical extends StatelessWidget {
             const SizedBox(
               height: LJSizes.spaceBtwItems / 5,
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.only(left: LJSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,7 +102,9 @@ class ProductCardVertical extends StatelessWidget {
                   const SizedBox(
                     height: LJSizes.spaceBtwItems / 5,
                   ),
-                  BrandTitleWithVerified(title: brandName,),
+                  BrandTitleWithVerified(
+                    title: brandName,
+                  ),
                 ],
               ),
             ),
@@ -103,7 +112,7 @@ class ProductCardVertical extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                 Padding(
+                Padding(
                   padding: const EdgeInsets.only(left: LJSizes.sm),
                   child: ProductPriceText(price: price),
                 ),
@@ -136,4 +145,3 @@ class ProductCardVertical extends StatelessWidget {
     );
   }
 }
-

@@ -3,9 +3,10 @@ import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 
 class LJTabBar extends StatelessWidget implements PreferredSizeWidget {
-  const LJTabBar({super.key, required this.tabs});
+  const LJTabBar({super.key, required this.tabs, required this.onTap, });
 
   final List<Widget> tabs;
+  final Function(int index) onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class LJTabBar extends StatelessWidget implements PreferredSizeWidget {
     return Material(
       color: dark ? Colors.black : Colors.white,
       child: TabBar(
+        onTap: onTap,
         tabs: tabs,
         isScrollable: true,
         indicatorColor: Colors.amber,
@@ -26,5 +28,5 @@ class LJTabBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(48);
 }

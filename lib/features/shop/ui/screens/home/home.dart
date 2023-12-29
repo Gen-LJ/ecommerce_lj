@@ -109,6 +109,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemCount: state.allProducts.length,
                         itemBuilder: (context, index) {
                           return ProductCardVertical(
+                            isNetworkImage : true,
+
                               title: state.allProducts[index].title ?? '',
                               brandName: state.allProducts[index].brand ?? '',
                               imageUrl: state.allProducts[index].thumbnail ?? '',
