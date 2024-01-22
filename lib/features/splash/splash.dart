@@ -1,5 +1,4 @@
 import 'package:ecommerce_lj/features/authentication/screens/login/login.dart';
-import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -38,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-          child: Icon(Icons.shop,color: Colors.amber,size: 200),
+          child: Icon(Icons.shop,color: Colors.amber,size: 100),
       ),
     );
   }

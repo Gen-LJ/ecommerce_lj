@@ -4,10 +4,10 @@ part of 'bot_nav_bloc.dart';
 abstract class BotNavState {
   final int currentIndex;
 
-   BotNavState({required this.currentIndex});
+   const BotNavState({required this.currentIndex});
 }
 
 class BotNavInitial extends BotNavState {
-  BotNavInitial({required super.currentIndex});
+  const BotNavInitial({required super.currentIndex});
 
 }

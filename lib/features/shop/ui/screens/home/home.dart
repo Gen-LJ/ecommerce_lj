@@ -74,7 +74,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         height: LJSizes.spaceBtwItems,
                       ),
-                      HomeCategories()
+                      HomeCategories(),
+                      SizedBox(height : LJSizes.sm)
                     ],
                   ),
                 ),

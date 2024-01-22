@@ -11,12 +11,12 @@ part 'product_by_category_state.dart';
 
 class ProductByCategoryBloc extends Bloc<ProductByCategoryEvent, ProductByCategoryState> {
   ProductByCategoryBloc() : super(ProductByCategoryInitial()) {
-    final ProductByCategoryService _productByCategoryService = ProductByCategoryService(Dio());
+    final ProductByCategoryService productByCategoryService = ProductByCategoryService(Dio());
     on<ProductByCategoryEvent>((event, emit) async{
       if(event is GetProductByCategory){
         emit(ProductByCategoryLoad());
         try{
-          final productModel = await _productByCategoryService.getProductByCategory(event.category);
+          final productModel = await productByCategoryService.getProductByCategory(event.category);
           final List<Products>? productsByCategory = productModel.products;
           emit(ProductByCategorySuccess(productsByCategory!));
         }

@@ -6,7 +6,7 @@ import 'package:ecommerce_lj/Common/widgets/layout/grid_layout.dart';
 import 'package:ecommerce_lj/Common/widgets/products/carts/cart_counter_icon.dart';
 import 'package:ecommerce_lj/Common/widgets/texts/section_header.dart';
 import 'package:ecommerce_lj/features/shop/bloc/categories/categories_cubit.dart';
-import 'package:ecommerce_lj/features/shop/ui/screens/store/widget/CategoryTab.dart';
+import 'package:ecommerce_lj/features/shop/ui/screens/store/widget/category_tab.dart';
 import 'package:ecommerce_lj/utils/constants/images_string.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -117,7 +117,10 @@ class _StoreScreenState extends State<StoreScreen> {
                                     style: const TextStyle(fontSize: 14),
                                   ),
                                 );
-                              })))
+                              }
+                              )
+                          )
+                      )
                     ];
                   },
                   body: TabBarView(

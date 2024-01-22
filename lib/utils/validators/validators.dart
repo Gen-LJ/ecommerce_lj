@@ -13,7 +13,7 @@ class LJValidate{
       return 'Password is empty';
     }
     if(value.length <6){
-      return 'Password must be at least 6 charactors';
+      return 'Password must be at least 6 characters';
     }
   }
 

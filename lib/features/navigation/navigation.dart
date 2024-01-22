@@ -3,7 +3,7 @@ import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../personalization/ui/screen/favourite.dart';
+import '../shop/ui/screens/favourite/favourite.dart';
 import '../personalization/ui/screen/profile.dart';
 import '../shop/ui/screens/home/home.dart';
 import '../shop/ui/screens/store/store.dart';
@@ -22,7 +22,7 @@ class _BotNavigationScreenState extends State<BotNavigationScreen> {
 
     final dark = LJDeviceUtils.isDarkMode(context);
 
-    final List<Widget> _bodyList = [
+    final List<Widget> bodyList = [
       const HomeScreen(),
       const StoreScreen(),
       const FavouriteScreen(),
@@ -34,7 +34,7 @@ class _BotNavigationScreenState extends State<BotNavigationScreen> {
       },
       builder: (context, state) {
         return Scaffold(
-          body: _bodyList[state.currentIndex],
+          body: bodyList[state.currentIndex],
           bottomNavigationBar: NavigationBar(
             elevation: 0,
             backgroundColor: dark? Colors.black : Colors.white,

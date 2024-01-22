@@ -27,7 +27,7 @@ class BrandShowCase extends StatelessWidget {
           LJDeviceUtils.isDarkMode(context) ? Colors.white : Colors.grey,
       backgroundColor: Colors.transparent,
       child: Padding(
-        padding: EdgeInsets.all(LJSizes.xs),
+        padding: const EdgeInsets.all(LJSizes.xs),
         child: Column(
           children: [
             BrandCard(
@@ -37,7 +37,7 @@ class BrandShowCase extends StatelessWidget {
               isNetworkImage: isNetworkImage,
             ),
             Padding(
-              padding: EdgeInsets.all(LJSizes.xs),
+              padding: const EdgeInsets.all(LJSizes.xs),
               child: Row(
                   children: List.generate(images.length, (index) {
                 return Expanded(
@@ -56,7 +56,7 @@ class BrandShowCase extends StatelessWidget {
                               imageUrl: images[index]),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: LJSizes.xs,
                       )
                     ],

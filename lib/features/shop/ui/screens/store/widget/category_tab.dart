@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../Common/widgets/layout/grid_layout.dart';
-import '../../../../../../Common/widgets/products/products_cart/products_cart_vertical.dart';
 import '../../../../../../Common/widgets/texts/section_header.dart';
 import '../../../../../../common/widgets/brand/brand_show_case.dart';
-import '../../../../../../utils/constants/images_string.dart';
 import '../../../../../../utils/constants/sizes.dart';
 
 class CategoryTab extends StatelessWidget {
-   CategoryTab({
+   const CategoryTab({
     super.key,
     required this.itemCount,
     // required this.title,

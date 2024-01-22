@@ -1,12 +1,10 @@
-import 'package:ecommerce_lj/Common/widgets/layout/grid_layout.dart';
 import 'package:ecommerce_lj/Common/widgets/products/products_cart/products_cart_vertical.dart';
 import 'package:ecommerce_lj/features/shop/bloc/product_by_category/product_by_category_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../utils/device/device_utility.dart';
-import '../../../shop/data/model/product_model.dart';
-import '../../../shop/ui/screens/store/widget/CategoryTab.dart';
+import '../../../data/model/product_model.dart';
+import '../store/widget/category_tab.dart';
 
 class FavouriteScreen extends StatefulWidget {
   const FavouriteScreen({super.key});

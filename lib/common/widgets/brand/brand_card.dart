@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/enums.dart';
-import '../../../utils/constants/images_string.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/device/device_utility.dart';
 import '../container/rounded_container.dart';

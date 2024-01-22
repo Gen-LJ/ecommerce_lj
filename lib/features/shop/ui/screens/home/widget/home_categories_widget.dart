@@ -34,8 +34,9 @@ class _HomeCategoriesState extends State<HomeCategories> {
               scrollDirection: Axis.horizontal,
               itemCount: state.categories.length,
               itemBuilder: (context, index) {
-                return  VerticalIconText(title: state.categories![index],
-                  icon: Icons.shopify,
+                return  VerticalIconText(
+                  title: state.categories[index],
+                  icon: state.categories[index].toIcon(),
                   textColor: Colors.white,);
               });
           }
@@ -54,6 +55,62 @@ class _HomeCategoriesState extends State<HomeCategories> {
         },
       ),
     );
+  }
+
+}
+
+
+
+extension on String {
+  IconData toIcon() {
+    switch (this) {
+      case "smartphones":
+        return Icons.phone_iphone_rounded;
+      case "laptops":
+        return Icons.laptop_mac_rounded;
+      case 'fragrances':
+        return Icons.auto_fix_high;
+      case 'skincare':
+        return Icons.brush;
+      case 'groceries':
+        return Icons.local_grocery_store_rounded;
+      case 'home-decoration':
+        return Icons.build;
+      case 'furniture':
+        return Icons.chair;
+      case 'tops':
+        return Icons.checkroom;
+      case 'tops':
+        return Icons.checkroom;
+      case 'womens-dresses':
+        return Icons.woman;
+      case 'womens-shoes':
+        return Icons.roller_skating_outlined;
+      case 'mens-shirts':
+        return Icons.person_outline_rounded;
+      case 'mens-shoes':
+        return Icons.roller_skating;
+      case 'mens-watches':
+        return Icons.watch;
+      case 'womens-watches':
+        return Icons.watch_outlined;
+      case 'womens-bags':
+        return Icons.shopping_bag_rounded;
+      case 'womens-jewellery':
+        return Icons.diamond;
+      case 'sunglasses':
+        return Icons.voicemail;
+      case 'tops':
+        return Icons.checkroom;
+      case 'automotive':
+        return Icons.directions_car_filled_rounded;
+      case 'motorcycle':
+        return Icons.motorcycle;
+      case 'lighting':
+        return Icons.lightbulb;
+      default:
+        return Icons.add;
+    }
   }
 }
 
