@@ -11,14 +11,16 @@ class FavouriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const LJAppBar(title: Text('Favourite')),
-      body: GridLayout(itemCount: 2, itemBuilder: (context,index) {
-          return const ProductCardVertical(
-              title: 'Running Shoe',
-              brandName: 'Nike',
-              imageUrl: LJImages.shoe2,
-              price: '399.9',
-              discountPercentage: '20');
-      }),
+      body: SingleChildScrollView(
+        child: GridLayout(itemCount: 1, itemBuilder: (context,index) {
+            return const ProductCardVertical(
+                title: 'Running Shoe',
+                brandName: 'Nike',
+                imageUrl: LJImages.shoe2,
+                price: '399.9',
+                discountPercentage: '20');
+        }),
+      ),
     );
   }
 }
