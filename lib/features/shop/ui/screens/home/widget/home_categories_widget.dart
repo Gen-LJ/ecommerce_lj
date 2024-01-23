@@ -43,6 +43,18 @@ class _HomeCategoriesState extends State<HomeCategories> {
           if(state is CategoriesFail){
             return Text(state.error);
           }
+          if (state is CategoriesLoad){
+            return ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: 6,
+                itemBuilder: (context, index) {
+                  return  const VerticalIconText(title: '',
+                    isIcon : false,
+                    icon: Icons.cached_rounded,
+                    textColor: Colors.white,);
+                });
+          }
           return ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,

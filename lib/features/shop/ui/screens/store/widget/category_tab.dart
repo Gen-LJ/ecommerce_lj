@@ -50,7 +50,6 @@ class CategoryTab extends StatelessWidget {
                 GridLayout(
                     itemCount: itemCount,
                     itemBuilder: itemBuilder
-
                     )
               ],
             ),

@@ -9,8 +9,11 @@ class VerticalIconText extends StatelessWidget {
     this.backgroundColor ,
     required this.icon,
     this.onPressed,
-    this.textColor ,
+    this.textColor,
+     this.isIcon = true,
   });
+
+  final bool isIcon;
   final String title;
   final Color? backgroundColor;
   final Color? textColor;
@@ -34,7 +37,7 @@ class VerticalIconText extends StatelessWidget {
                   color: backgroundColor ?? (dark? Colors.black : Colors.white),
                   borderRadius: BorderRadius.circular(100)
               ),
-              child: Icon(icon,color: dark? Colors.white : Colors.black),
+              child: isIcon ? Icon(icon,color: dark? Colors.white : Colors.black) : const CircularProgressIndicator(color: Colors.amber,),
             ),
             const SizedBox(height: LJSizes.spaceBtwItems/4,),
             SizedBox(
