@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../shop/ui/screens/favourite/favourite.dart';
-import '../personalization/ui/screen/profile.dart';
+import '../personalization/ui/screen/settings/settings.dart';
 import '../shop/ui/screens/home/home.dart';
 import '../shop/ui/screens/store/store.dart';
 
@@ -26,7 +26,7 @@ class _BotNavigationScreenState extends State<BotNavigationScreen> {
       const HomeScreen(),
       const StoreScreen(),
       const FavouriteScreen(),
-      const ProfileScreen(),
+      const SettingsScreen(),
     ];
 
     return BlocConsumer<BotNavBloc, BotNavState>(

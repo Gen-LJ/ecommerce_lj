@@ -4,11 +4,11 @@ import 'package:ecommerce_lj/common/widgets/list_tiles/setting_menu_tile.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../Common/widgets/appbar/app_bar.dart';
-import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
+import '../../../../../Common/widgets/appbar/app_bar.dart';
+import '../../../../../common/widgets/list_tiles/user_profile_tile.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
             HeaderContainer(
                 child: Column(
               children: [
-                LJAppBar(title: Text('Profile',style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),),),
+                LJAppBar(title: Text('Account',style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),),),
                 const UserProfileTile(),
                 const SizedBox(height: LJSizes.spaceBtwSections,)
               ],
