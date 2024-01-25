@@ -117,6 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               imageUrl: state.allProducts[index].thumbnail ?? '',
                               price: (state.allProducts[index].price).toString() ?? '',
                               discountPercentage : state.allProducts[index].discountPercentage.toString() ?? '',
+                              images : state.allProducts[index].images ?? []
 
                           );
                         });

@@ -1,6 +1,7 @@
 import 'package:ecommerce_lj/Common/widgets/container/rounded_container.dart';
 import 'package:ecommerce_lj/Common/widgets/icon/circular_icon.dart';
 import 'package:ecommerce_lj/Common/widgets/image/rounded_image.dart';
+import 'package:ecommerce_lj/features/shop/ui/screens/product_details/product_details.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
@@ -17,11 +18,13 @@ class ProductCardVertical extends StatelessWidget {
     required this.price,
     required this.discountPercentage,
     this.isNetworkImage = false,
+     this.images,
   });
 
   final String title;
   final String brandName;
   final String imageUrl;
+  final List<String>? images;
   final String price;
   final String discountPercentage;
   final bool isNetworkImage;
@@ -30,7 +33,10 @@ class ProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = LJDeviceUtils.isDarkMode(context);
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) =>  ProductDetailsScreen(image: imageUrl,images: images ?? [],)));
+      },
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

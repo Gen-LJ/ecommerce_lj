@@ -6,13 +6,13 @@ import '../../../utils/constants/sizes.dart';
 class LJAppBar extends StatelessWidget implements PreferredSizeWidget {
   const LJAppBar(
       {super.key,
-      required this.title,
+       this.title,
        this.showBackArrow = false,
       this.leadingIcon,
       this.actions,
       this.leadingCallback});
 
-  final Widget title;
+  final Widget? title;
   final bool showBackArrow;
   final IconData? leadingIcon;
   final List<Widget>? actions;
@@ -29,7 +29,7 @@ class LJAppBar extends StatelessWidget implements PreferredSizeWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: const Icon(Icons.arrow_back_ios_new))
+                icon: const Icon(Icons.arrow_back_ios_new,color: Colors.amber,))
             : leadingIcon != null
                 ? IconButton(
                     onPressed: leadingCallback, icon: Icon(leadingIcon))

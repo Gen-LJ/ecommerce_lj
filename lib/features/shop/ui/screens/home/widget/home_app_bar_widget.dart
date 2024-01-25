@@ -15,7 +15,7 @@ class HomeAppBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Good Day For Shopping Ain\'t It.',style: Theme.of(context).textTheme.labelMedium,),
-        Text('Genichiro Ashina',style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),)
+        Text('Genichiro',style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),)
       ],
     ),
       actions:  [
