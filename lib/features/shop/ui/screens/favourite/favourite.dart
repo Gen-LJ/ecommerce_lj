@@ -21,7 +21,8 @@ class FavouriteScreen extends StatelessWidget {
                   brandName: 'Nike',
                   imageUrl: LJImages.shoe2,
                   price: '399.9',
-                  discountPercentage: '20');
+                  discountPercentage: '20',
+              rating : 3.9);
           }),
         ),
       ),

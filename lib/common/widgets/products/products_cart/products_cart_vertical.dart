@@ -18,7 +18,7 @@ class ProductCardVertical extends StatelessWidget {
     required this.price,
     required this.discountPercentage,
     this.isNetworkImage = false,
-     this.images,
+     this.images, required this.rating,
   });
 
   final String title;
@@ -28,6 +28,7 @@ class ProductCardVertical extends StatelessWidget {
   final String price;
   final String discountPercentage;
   final bool isNetworkImage;
+  final double rating;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,13 @@ class ProductCardVertical extends StatelessWidget {
     return InkWell(
       onTap: () {
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) =>  ProductDetailsScreen(image: imageUrl,images: images ?? [],)));
+            MaterialPageRoute(builder: (context) =>  ProductDetailsScreen(
+              image: imageUrl,
+              images: images ?? [],
+            rating: rating,
+              discountPercentage: discountPercentage,
+              price: price,
+            )));
       },
       child: Container(
         width: 180,
@@ -70,7 +77,8 @@ class ProductCardVertical extends StatelessWidget {
                   left: 5,
                   top: 5,
                   child: RoundedContainer(
-                    backgroundColor: Colors.blue.withOpacity(0.5),
+                    backgroundColor: Colors.amber,
+                    //backgroundColor: Colors.blue.withOpacity(0.5),
                     radius: LJSizes.sm,
                     padding: const EdgeInsets.all(3),
                     child: Text(

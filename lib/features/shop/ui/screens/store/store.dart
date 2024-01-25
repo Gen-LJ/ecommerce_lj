@@ -152,7 +152,8 @@ class _StoreScreenState extends State<StoreScreen> {
                                         discountPercentage: products[index]
                                                 .discountPercentage
                                                 .toString() ??
-                                            '');
+                                            '',
+                                    rating : products[index].rating!.toDouble());
                                   });
                             } else if (state is ProductByCategoryLoad) {
                               return const Center(
