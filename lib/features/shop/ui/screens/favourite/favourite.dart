@@ -22,7 +22,10 @@ class FavouriteScreen extends StatelessWidget {
                   imageUrl: LJImages.shoe2,
                   price: '399.9',
                   discountPercentage: '20',
-              rating : 3.9);
+              rating : 3.9,
+              stock : '9',
+                category : 'Men\'s Shoes',
+              );
           }),
         ),
       ),

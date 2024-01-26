@@ -18,7 +18,10 @@ class ProductCardVertical extends StatelessWidget {
     required this.price,
     required this.discountPercentage,
     this.isNetworkImage = false,
-     this.images, required this.rating,
+     this.images,
+    required this.rating,
+    required this.stock,
+    required this.category,
   });
 
   final String title;
@@ -29,10 +32,17 @@ class ProductCardVertical extends StatelessWidget {
   final String discountPercentage;
   final bool isNetworkImage;
   final double rating;
+  final String stock;
+  final String category;
 
   @override
   Widget build(BuildContext context) {
     final dark = LJDeviceUtils.isDarkMode(context);
+
+    var price1 = double.parse(price);
+    var discountPercentage1 = double.parse(discountPercentage);
+    var discountedPrice = price1 - (price1 * (discountPercentage1/100));
+    
     return InkWell(
       onTap: () {
         Navigator.push(context,
@@ -42,6 +52,10 @@ class ProductCardVertical extends StatelessWidget {
             rating: rating,
               discountPercentage: discountPercentage,
               price: price,
+              title: title,
+              stock: stock,
+              brand: brandName,
+              category: category,
             )));
       },
       child: Container(
@@ -128,7 +142,14 @@ class ProductCardVertical extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: LJSizes.sm),
-                  child: ProductPriceText(price: price),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('\$$price',style: Theme.of(context).textTheme.labelSmall!.apply(decoration: TextDecoration.lineThrough),),
+                      ProductPriceText(price: discountedPrice.toStringAsFixed(2)),
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 1.0),

@@ -1,4 +1,5 @@
 import 'package:ecommerce_lj/features/shop/bloc/categories/categories_cubit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../../Common/widgets/image_text/vertical_image_text.dart';
@@ -87,7 +88,8 @@ extension on String {
       case 'groceries':
         return Icons.local_grocery_store_rounded;
       case 'home-decoration':
-        return Icons.build;
+        return CupertinoIcons.paintbrush_fill;
+          //Icons.build;
       case 'furniture':
         return Icons.chair;
       case 'tops':

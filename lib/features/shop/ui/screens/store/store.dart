@@ -147,13 +147,16 @@ class _StoreScreenState extends State<StoreScreen> {
                                         imageUrl:
                                             products[index].thumbnail ?? '',
                                         price:
-                                            products[index].price.toString() ??
-                                                '',
+                                            products[index].price.toString(),
                                         discountPercentage: products[index]
                                                 .discountPercentage
                                                 .toString() ??
                                             '',
-                                    rating : products[index].rating!.toDouble());
+                                    rating : products[index].rating!.toDouble(),
+                                    stock : products[index].stock.toString(),
+                                      category : products[index].category ?? '',
+                                      images: products[index].images,
+                                    );
                                   });
                             } else if (state is ProductByCategoryLoad) {
                               return const Center(
