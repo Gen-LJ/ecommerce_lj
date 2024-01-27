@@ -75,7 +75,6 @@ class ProductMetaData extends StatelessWidget {
   }
 }
 
-
 extension on String {
   IconData toIcon() {
     switch (this) {

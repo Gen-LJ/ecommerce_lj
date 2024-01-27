@@ -156,6 +156,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                     stock : products[index].stock.toString(),
                                       category : products[index].category ?? '',
                                       images: products[index].images,
+                                      description : products[index].description ?? ''
                                     );
                                   });
                             } else if (state is ProductByCategoryLoad) {

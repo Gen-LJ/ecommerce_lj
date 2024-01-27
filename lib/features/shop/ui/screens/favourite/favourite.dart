@@ -25,6 +25,7 @@ class FavouriteScreen extends StatelessWidget {
               rating : 3.9,
               stock : '9',
                 category : 'Men\'s Shoes',
+                description : 'Shoe',
               );
           }),
         ),

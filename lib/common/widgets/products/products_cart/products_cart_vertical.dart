@@ -21,7 +21,7 @@ class ProductCardVertical extends StatelessWidget {
      this.images,
     required this.rating,
     required this.stock,
-    required this.category,
+    required this.category, required this.description,
   });
 
   final String title;
@@ -34,6 +34,7 @@ class ProductCardVertical extends StatelessWidget {
   final double rating;
   final String stock;
   final String category;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +57,7 @@ class ProductCardVertical extends StatelessWidget {
               stock: stock,
               brand: brandName,
               category: category,
+              description: description,
             )));
       },
       child: Container(
@@ -132,6 +134,7 @@ class ProductCardVertical extends StatelessWidget {
                   ),
                   BrandTitleWithVerified(
                     title: brandName,
+                    mainAxisSize: MainAxisSize.max,
                   ),
                 ],
               ),

@@ -13,6 +13,6 @@ class LJChipTheme{
     labelStyle: TextStyle(color: Colors.white),
     selectedColor: Colors.amber,
     padding: EdgeInsets.symmetric(horizontal: 12,vertical: 12),
-    checkmarkColor: Colors.black,
+    checkmarkColor: Colors.white,
   );
 }

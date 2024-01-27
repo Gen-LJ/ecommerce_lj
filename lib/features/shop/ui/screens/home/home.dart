@@ -120,7 +120,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               images : state.allProducts[index].images ?? [],
                             rating : state.allProducts[index].rating?.toDouble() ?? 0,
                             stock : state.allProducts[index].stock.toString(),
-                            category : state.allProducts[index].category ?? ''
+                            category : state.allProducts[index].category ?? '',
+                            description : state.allProducts[index].description ?? ''
 
                           );
                         });
