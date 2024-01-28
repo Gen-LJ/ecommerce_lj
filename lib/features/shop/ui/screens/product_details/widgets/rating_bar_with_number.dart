@@ -17,7 +17,7 @@ class RatingBarWithNo extends StatelessWidget {
     return Row(
       children: [
         RatingBar(rating: rating),
-        SizedBox(width: LJSizes.sm,),
+        const SizedBox(width: LJSizes.sm,),
         Text(rating.toString(),style: Theme.of(context).textTheme.labelMedium,),
       ],
     );

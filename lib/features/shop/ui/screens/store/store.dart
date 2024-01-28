@@ -150,8 +150,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                             products[index].price.toString(),
                                         discountPercentage: products[index]
                                                 .discountPercentage
-                                                .toString() ??
-                                            '',
+                                                .toString() ,
                                     rating : products[index].rating!.toDouble(),
                                     stock : products[index].stock.toString(),
                                       category : products[index].category ?? '',

@@ -10,10 +10,10 @@ class BottomAddToCart extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = LJDeviceUtils.isDarkMode(context);
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace,vertical: LJSizes.defaultSpace/2),
+      padding: const EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace,vertical: LJSizes.defaultSpace/2),
       decoration: BoxDecoration(
         color: dark ? Colors.grey : Colors.white,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(LJSizes.cardRadiusLg),
           topRight: Radius.circular(LJSizes.cardRadiusLg)
         )
@@ -29,9 +29,9 @@ class BottomAddToCart extends StatelessWidget {
               height: 35,
               backgroundColor:  dark ? Colors.black.withOpacity(0.3) : Colors.grey,
               color:  Colors.white,),
-              SizedBox(width: LJSizes.spaceBtwItems,),
+              const SizedBox(width: LJSizes.spaceBtwItems,),
               Text('3',style: Theme.of(context).textTheme.titleSmall,),
-              SizedBox(width: LJSizes.spaceBtwItems,),
+              const SizedBox(width: LJSizes.spaceBtwItems,),
               CircularIcon(icon: Icons.add, onPressed: (){},
                 size: 20,
                 width: 35,
@@ -40,11 +40,11 @@ class BottomAddToCart extends StatelessWidget {
                 color:  Colors.white,),
             ],
           ),
-          ElevatedButton(onPressed: (){}, child: Text('Add To Cart',style: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),),
+          ElevatedButton(onPressed: (){},
           style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(LJSizes.md),
+            padding: const EdgeInsets.all(LJSizes.md),
             backgroundColor: Colors.amber
-          ),)
+          ), child: Text('Add To Cart',style: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),),)
         ],
       ),
 

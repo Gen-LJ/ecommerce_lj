@@ -44,31 +44,31 @@ class ProductMetaData extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelLarge,
               ),
             ),
-            SizedBox(width: LJSizes.lg,),
+            const SizedBox(width: LJSizes.lg,),
             Text('\$$price',style: Theme.of(context).textTheme.titleSmall!.apply(decoration: TextDecoration.lineThrough),),
-            SizedBox(width: LJSizes.lg,),
+            const SizedBox(width: LJSizes.lg,),
             ProductPriceText(price: discountedPrice.toStringAsFixed(2))
           ],
         ),
-        SizedBox(height: LJSizes.sm,),
+        const SizedBox(height: LJSizes.sm,),
         ProductTitleText(title: title),
-        SizedBox(height: LJSizes.sm,),
+        const SizedBox(height: LJSizes.sm,),
         Row(
           children: [
-            ProductTitleText(title: 'In Stock :'),
-            SizedBox(width: LJSizes.xs,),
+            const ProductTitleText(title: 'In Stock :'),
+            const SizedBox(width: LJSizes.xs,),
             ProductTitleText(title: stock,),
           ],
         ),
-        SizedBox(height: LJSizes.sm,),
+        const SizedBox(height: LJSizes.sm,),
         Row(
           children: [
             Icon(category.toIcon()),
-            SizedBox(width: LJSizes.sm,),
+            const SizedBox(width: LJSizes.sm,),
             BrandTitleWithVerified(title: brand,brandTextSizes: TextSizes.medium,),
           ],
         ),
-        SizedBox(height: LJSizes.sm,),
+        const SizedBox(height: LJSizes.sm,),
 
       ],
     );
@@ -94,8 +94,6 @@ extension on String {
         return Icons.chair;
       case 'tops':
         return Icons.checkroom;
-      case 'tops':
-        return Icons.checkroom;
       case 'womens-dresses':
         return Icons.woman;
       case 'womens-shoes':
@@ -114,8 +112,6 @@ extension on String {
         return Icons.diamond;
       case 'sunglasses':
         return Icons.voicemail;
-      case 'tops':
-        return Icons.checkroom;
       case 'automotive':
         return Icons.directions_car_filled_rounded;
       case 'motorcycle':

@@ -12,9 +12,9 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: LJAppBar(title: Text('Profile'),showBackArrow: true,),
+      appBar: const LJAppBar(title: Text('Profile'),showBackArrow: true,),
       body: SingleChildScrollView(
-        child: Padding(padding: EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace,vertical: LJSizes.sm),
+        child: Padding(padding: const EdgeInsets.symmetric(horizontal: LJSizes.defaultSpace,vertical: LJSizes.sm),
         child: Column(
           children: [
             SizedBox(
@@ -22,38 +22,38 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const CircularImage(imageUrl: LJImages.profile,backgroundColor: Colors.white,padding: 0,width: 60, height: 60,),
-                  TextButton(onPressed: (){}, child: Text('Change profile picture'))
+                  TextButton(onPressed: (){}, child: const Text('Change profile picture'))
                 ],
               ),
             ),
 
-            SizedBox(height: LJSizes.sm,),
-            Divider(),
-            SizedBox(height: LJSizes.sm,),
+            const SizedBox(height: LJSizes.sm,),
+            const Divider(),
+            const SizedBox(height: LJSizes.sm,),
 
-            SectionHeader(title: 'Profile Information'),
+            const SectionHeader(title: 'Profile Information'),
 
-            SizedBox(height: LJSizes.sm,),
+            const SizedBox(height: LJSizes.sm,),
 
 
             ProfileMenu(onPressed: () {  }, title: 'Name', value: 'Genichiro',),
             ProfileMenu(onPressed: () {  }, title: 'Username', value: 'genichiro_ashina',),
 
-            Divider(),
-            SizedBox(height: LJSizes.sm,),
+            const Divider(),
+            const SizedBox(height: LJSizes.sm,),
 
-            SectionHeader(title: 'Personal information'),
+            const SectionHeader(title: 'Personal information'),
 
-            SizedBox(height: LJSizes.sm,),
+            const SizedBox(height: LJSizes.sm,),
 
             ProfileMenu(onPressed: () {  }, title: 'User ID', value: '336795',),
             ProfileMenu(onPressed: () {  }, title: 'Phone Number', value: '09783432746',),
             ProfileMenu(onPressed: () {  }, title: 'E-mail', value: 'genichiro12345@gmail.com',),
             ProfileMenu(onPressed: () {  }, title: 'Gender', value: 'Male',),
             ProfileMenu(onPressed: () {  }, title: 'Date of Birth', value: '12 Aug, 1995',),
-            Divider(),
+            const Divider(),
 
-            TextButton(onPressed: (){}, child: Text('Delete Account',style: TextStyle(color: Colors.red),))
+            TextButton(onPressed: (){}, child: const Text('Delete Account',style: TextStyle(color: Colors.red),))
 
           ],
         ),),

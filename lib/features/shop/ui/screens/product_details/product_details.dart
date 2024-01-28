@@ -5,7 +5,6 @@ import 'package:ecommerce_lj/features/shop/ui/screens/product_details/widgets/pr
 import 'package:ecommerce_lj/features/shop/ui/screens/product_details/widgets/product_image_slider.dart';
 import 'package:ecommerce_lj/features/shop/ui/screens/product_details/widgets/product_meta_data.dart';
 import 'package:ecommerce_lj/features/shop/ui/screens/product_details/widgets/rating_bar_with_number.dart';
-import 'package:ecommerce_lj/utils/constants/get_color.dart';
 import 'package:ecommerce_lj/utils/constants/sizes.dart';
 import 'package:ecommerce_lj/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +39,7 @@ class ProductDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = LJDeviceUtils.isDarkMode(context);
     return Scaffold(
-      bottomNavigationBar: BottomAddToCart(),
+      bottomNavigationBar: const BottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,29 +50,29 @@ class ProductDetailsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   RatingBarWithNo(rating: rating),
-                  SizedBox(
+                  const SizedBox(
                     height: LJSizes.sm,
                   ),
                   ProductMetaData(
-                    discountPercentage: discountPercentage ?? '',
-                    price: price ?? '',
-                    title: title ?? '',
-                    stock: stock ?? '',
-                    brand: brand ?? '',
-                    category: category ?? '',
+                    discountPercentage: discountPercentage ,
+                    price: price ,
+                    title: title ,
+                    stock: stock ,
+                    brand: brand ,
+                    category: category ,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: LJSizes.sm,
                   ),
                   ProductDescription(
-                    description: description ?? '',
+                    description: description ,
                   ),
-                  SizedBox(height: LJSizes.md,),
+                  const SizedBox(height: LJSizes.md,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SectionHeader(title: 'Colors'),
-                      SizedBox(height: LJSizes.sm,),
+                      const SectionHeader(title: 'Colors'),
+                      const SizedBox(height: LJSizes.sm,),
                       Wrap(
                         spacing: 8,
                         children: [
@@ -92,12 +91,12 @@ class ProductDetailsScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: LJSizes.sm,),
+                  const SizedBox(height: LJSizes.sm,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SectionHeader(title: 'Size'),
-                      SizedBox(height: LJSizes.sm,),
+                      const SectionHeader(title: 'Size'),
+                      const SizedBox(height: LJSizes.sm,),
                       Wrap(spacing: 8,
                         children: [
                           LJChoiceChip(text: '128 GB', selected: false,onSelected: (value){}),

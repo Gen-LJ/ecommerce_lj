@@ -13,12 +13,12 @@ class ProductDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = LJDeviceUtils.isDarkMode(context);
     return RoundedContainer(
-      padding: EdgeInsets.all(LJSizes.md),
+      padding: const EdgeInsets.all(LJSizes.md),
       backgroundColor: dark? Colors.grey.withOpacity(0.1) : Colors.amber.withOpacity(0.2),
       child: Column(
         children: [
-        SectionHeader(title: 'Description'),
-          SizedBox(height: LJSizes.sm,),
+        const SectionHeader(title: 'Description'),
+          const SizedBox(height: LJSizes.sm,),
           Container(
             height: 85,
             //color: Colors.red,

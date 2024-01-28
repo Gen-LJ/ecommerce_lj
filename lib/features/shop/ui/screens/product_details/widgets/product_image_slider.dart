@@ -43,7 +43,7 @@ class ProductImageSlider extends StatelessWidget {
                       shrinkWrap: true,
                       itemCount: images.length,
                       separatorBuilder: (_, __) {
-                        return SizedBox(
+                        return const SizedBox(
                           width: LJSizes.spaceBtwItems,
                         );
                       },

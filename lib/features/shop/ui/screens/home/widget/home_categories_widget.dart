@@ -94,8 +94,6 @@ extension on String {
         return Icons.chair;
       case 'tops':
         return Icons.checkroom;
-      case 'tops':
-        return Icons.checkroom;
       case 'womens-dresses':
         return Icons.woman;
       case 'womens-shoes':
@@ -114,8 +112,6 @@ extension on String {
         return Icons.diamond;
       case 'sunglasses':
         return Icons.voicemail;
-      case 'tops':
-        return Icons.checkroom;
       case 'automotive':
         return Icons.directions_car_filled_rounded;
       case 'motorcycle':
